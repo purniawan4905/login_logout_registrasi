@@ -37,7 +37,9 @@ class LoginView extends StatefulWidget {
                         ),
                         helperText: 'Enter your email address',
                       ),
-                      onChanged: (value) {},
+                      onChanged: (value) {
+                        controller.email = value;
+                      },
                     ),
                     TextFormField(
                       initialValue: '123456',
@@ -58,7 +60,9 @@ class LoginView extends StatefulWidget {
                         ),
                         helperText: 'Enter your password',
                       ),
-                      onChanged: (value) {},
+                      onChanged: (value) {
+                        controller.password = value;
+                      },
                     ),
                     Divider(),
                     SizedBox(
