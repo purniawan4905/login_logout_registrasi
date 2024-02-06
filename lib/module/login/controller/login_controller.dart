@@ -28,6 +28,14 @@ class LoginController extends State<LoginView> {
       password: password!,
     );
 
+    if (isLoggedIn == false) {
+      const snackBar = SnackBar(
+        content: Text('Gagal login!'),
+      );
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      return;
+    }
+
     if (isLoggedIn) {
       Get.offAll(const MainNavigationView());
     }
