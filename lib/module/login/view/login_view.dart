@@ -20,7 +20,7 @@ class LoginView extends StatefulWidget {
                 child: Column(
                   children: [
                     TextFormField(
-                      initialValue: 'admin@gmail.com',
+                      // initialValue: 'admin@gmail.com',
                       maxLength: 20,
                       decoration: const InputDecoration(
                         labelText: 'Email',
@@ -42,7 +42,7 @@ class LoginView extends StatefulWidget {
                       },
                     ),
                     TextFormField(
-                      initialValue: '123456',
+                      // initialValue: '123456',
                       maxLength: 20,
                       obscureText: true,
                       decoration: const InputDecoration(
