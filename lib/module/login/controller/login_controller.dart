@@ -28,7 +28,7 @@ class LoginController extends State<LoginView> {
       password: password!,
     );
 
-    if (isLoggedIn == false) {
+    if (!isLoggedIn) {
       const snackBar = SnackBar(
         content: Text('Gagal login!'),
       );
@@ -36,8 +36,6 @@ class LoginController extends State<LoginView> {
       return;
     }
 
-    if (isLoggedIn) {
-      Get.offAll(const MainNavigationView());
-    }
+    Get.offAll(const MainNavigationView());
   }
 }
