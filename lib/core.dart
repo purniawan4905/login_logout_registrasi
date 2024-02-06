@@ -8,3 +8,7 @@ export 'package:login_logout_regitrasi/module/login/controller/login_controller.
 export 'package:login_logout_regitrasi/module/login/view/login_view.dart';
 export 'package:login_logout_regitrasi/module/main_navigation/controller/main_navigation_controller.dart';
 export 'package:login_logout_regitrasi/module/main_navigation/view/main_navigation_view.dart';
+export 'package:login_logout_regitrasi/module/register/controller/register_controller.dart';
+export 'package:login_logout_regitrasi/module/register/view/register_view.dart';
+export 'package:login_logout_regitrasi/service/auth_service/auth_service.dart';
+export 'package:login_logout_regitrasi/state_util.dart';

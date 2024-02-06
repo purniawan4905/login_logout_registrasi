@@ -1,6 +1,7 @@
 {
     "modules": [
         "login",
+        "register",
         "main_navigation"
     ],
     "module_directory_name": "module",
