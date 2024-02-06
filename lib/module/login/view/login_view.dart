@@ -16,6 +16,7 @@ class LoginView extends StatefulWidget {
         child: Container(
           padding: const EdgeInsets.all(30.0),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextFormField(
                 initialValue: 'admin@gmail.com',
