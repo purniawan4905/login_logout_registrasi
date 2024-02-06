@@ -15,7 +15,7 @@ class LoginView extends StatefulWidget {
         ),
         body: SingleChildScrollView(
         child: Container(
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(30.0),
             child: Column(
             children: [
               TextFormField(
