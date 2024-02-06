@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthService {
-  loginByEmail({
+  Future<bool> loginByEmail({
     required String email,
     required String password,
   }) async {
@@ -10,8 +10,10 @@ class AuthService {
         email: email,
         password: password,
       );
+      return true;
     } on Exception catch (err) {
       print(err);
+      return false;
     }
   }
 }
