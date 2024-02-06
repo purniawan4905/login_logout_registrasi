@@ -8,10 +8,6 @@ class LoginView extends StatefulWidget {
   Widget build(context, LoginController controller) {
     controller.view = this;
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Login"),
-        actions: const [],
-      ),
       body: Container(
           padding: const EdgeInsets.all(30.0),
           child: Column(
