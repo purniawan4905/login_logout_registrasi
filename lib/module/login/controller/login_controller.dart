@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:login_logout_regitrasi/core.dart';
 import 'package:login_logout_regitrasi/service/auth_service/auth_service.dart';
+import 'package:login_logout_regitrasi/state_util.dart';
 import '../view/login_view.dart';
 
 class LoginController extends State<LoginView> {
@@ -26,5 +27,9 @@ class LoginController extends State<LoginView> {
       email: email!,
       password: password!,
     );
+
+    if (isLoggedIn) {
+      Get.offAll(const MainNavigationView());
+    }
   }
 }
