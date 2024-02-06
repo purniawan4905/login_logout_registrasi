@@ -65,9 +65,6 @@ class LoginView extends StatefulWidget {
                       width: MediaQuery.of(context).size.width,
                       height: 46,
                       child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.blueGrey,
-                        ),
                         onPressed: () {},
                         child: const Text("Login"),
                       ),
