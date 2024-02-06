@@ -8,6 +8,7 @@ class LoginView extends StatefulWidget {
   Widget build(context, LoginController controller) {
     controller.view = this;
     return Scaffold(
+      backgroundColor: Colors.blueGrey[600],
       body: Container(
           padding: const EdgeInsets.all(30.0),
           child: Column(
