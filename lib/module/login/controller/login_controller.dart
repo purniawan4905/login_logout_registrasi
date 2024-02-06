@@ -18,6 +18,10 @@ class LoginController extends State<LoginView> {
 
     @override
     Widget build(BuildContext context) => widget.build(context, this);
+
+    String? email;
+    String? password;
+    login() {}
 }
         
     
