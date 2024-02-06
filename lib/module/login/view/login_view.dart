@@ -10,65 +10,73 @@ class LoginView extends StatefulWidget {
     return Scaffold(
       backgroundColor: Colors.blueGrey[600],
       body: Container(
-          padding: const EdgeInsets.all(30.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              TextFormField(
-                initialValue: 'admin@gmail.com',
-                maxLength: 20,
-                decoration: const InputDecoration(
-                  labelText: 'Email',
-                  labelStyle: TextStyle(
-                    color: Colors.blueGrey,
-                  ),
-                  suffixIcon: Icon(
-                    Icons.email,
-                  ),
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Colors.blueGrey,
+        padding: const EdgeInsets.all(30.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Card(
+              child: Container(
+                child: Column(
+                  children: [
+                    TextFormField(
+                      initialValue: 'admin@gmail.com',
+                      maxLength: 20,
+                      decoration: const InputDecoration(
+                        labelText: 'Email',
+                        labelStyle: TextStyle(
+                          color: Colors.blueGrey,
+                        ),
+                        suffixIcon: Icon(
+                          Icons.email,
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.blueGrey,
+                          ),
+                        ),
+                        helperText: 'Enter your email address',
+                      ),
+                      onChanged: (value) {},
                     ),
-                  ),
-                  helperText: 'Enter your email address',
-                ),
-                onChanged: (value) {},
-              ),
-              TextFormField(
-                initialValue: '123456',
-                maxLength: 20,
-                obscureText: true,
-                decoration: const InputDecoration(
-                  labelText: 'Password',
-                  labelStyle: TextStyle(
-                    color: Colors.blueGrey,
-                  ),
-                  suffixIcon: Icon(
-                    Icons.password,
-                  ),
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Colors.blueGrey,
+                    TextFormField(
+                      initialValue: '123456',
+                      maxLength: 20,
+                      obscureText: true,
+                      decoration: const InputDecoration(
+                        labelText: 'Password',
+                        labelStyle: TextStyle(
+                          color: Colors.blueGrey,
+                        ),
+                        suffixIcon: Icon(
+                          Icons.password,
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.blueGrey,
+                          ),
+                        ),
+                        helperText: 'Enter your password',
+                      ),
+                      onChanged: (value) {},
                     ),
-                  ),
-                  helperText: 'Enter your password',
-                ),
-                onChanged: (value) {},
-              ),
-              Divider(),
-              SizedBox(
-                width: MediaQuery.of(context).size.width,
-                height: 46,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blueGrey,
-                  ),
-                  onPressed: () {},
-                  child: const Text("Login"),
+                    Divider(),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      height: 46,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blueGrey,
+                        ),
+                        onPressed: () {},
+                        child: const Text("Login"),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
+            )
+          ],
+        ),
       ),
     );
   }
