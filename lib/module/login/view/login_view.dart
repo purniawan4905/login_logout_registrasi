@@ -12,8 +12,7 @@ class LoginView extends StatefulWidget {
         title: const Text("Login"),
         actions: const [],
       ),
-      body: SingleChildScrollView(
-        child: Container(
+      body: Container(
           padding: const EdgeInsets.all(30.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -73,7 +72,6 @@ class LoginView extends StatefulWidget {
               ),
             ],
           ),
-        ),
       ),
     );
   }
