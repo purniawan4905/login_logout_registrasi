@@ -16,6 +16,7 @@ class LoginView extends StatefulWidget {
           children: [
             Card(
               child: Container(
+                padding: const EdgeInsets.all(20.0),
                 child: Column(
                   children: [
                     TextFormField(
