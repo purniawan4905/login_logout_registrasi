@@ -58,6 +58,7 @@ class LoginView extends StatefulWidget {
                 ),
                 onChanged: (value) {},
               ),
+              Divider(),
               SizedBox(
                 width: MediaQuery.of(context).size.width,
                 height: 46,
