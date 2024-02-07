@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:login_logout_regitrasi/core.dart';
 import '../controller/main_navigation_controller.dart';
@@ -7,18 +6,66 @@ class MainNavigationView extends StatefulWidget {
   const MainNavigationView({Key? key}) : super(key: key);
 
   Widget build(context, MainNavigationController controller) {
-  controller.view = this;
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("MainNavigation"),
-        actions: const [],
-        ),
-        body: SingleChildScrollView(
-        child: Container(
-            padding: const EdgeInsets.all(10.0),
-            child: Column(
-            children: const [],
+    controller.view = this;
+    /*
+    TODO: Implement this @ controller
+    int selectedIndex = 0;
+    updateIndex(int newIndex) {
+    selectedIndex = newIndex;
+    setState(() {});
+    }
+    */
+    return DefaultTabController(
+      length: 4,
+      initialIndex: controller.selectedIndex,
+      child: Scaffold(
+        body: IndexedStack(
+          index: controller.selectedIndex,
+          children: [
+            Container(
+              color: Colors.red,
             ),
+            Container(
+              color: Colors.green,
+            ),
+            Container(
+              color: Colors.blue,
+            ),
+            Container(
+              color: Colors.purple,
+            ),
+          ],
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: controller.selectedIndex,
+          onTap: (newIndex) => controller.updateIndex(newIndex),
+          type: BottomNavigationBarType.fixed,
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.dashboard,
+              ),
+              label: "Dashboard",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.list,
+              ),
+              label: "Order",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.favorite,
+              ),
+              label: "Favorite",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.person,
+              ),
+              label: "Profile",
+            ),
+          ],
         ),
       ),
     );
@@ -27,4 +74,3 @@ class MainNavigationView extends StatefulWidget {
   @override
   State<MainNavigationView> createState() => MainNavigationController();
 }
-    
