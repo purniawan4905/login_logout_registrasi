@@ -15,4 +15,12 @@ class AuthService {
       return false;
     }
   }
+
+  Future<bool> register() {
+    try {
+       
+    } on Exception catch (err) {
+      print(err);
+    }
+  }
 }

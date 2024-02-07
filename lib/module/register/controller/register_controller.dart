@@ -20,5 +20,7 @@ class RegisterController extends State<RegisterView> {
 
   String? email;
   String? password;
-  register() async {}
+  register() async {
+    AuthService().register();
+  }
 }
