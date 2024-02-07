@@ -21,9 +21,19 @@ class RegisterController extends State<RegisterView> {
   String? email;
   String? password;
   register() async {
-    AuthService().register(
+    bool isLoggedIn = await AuthService().register(
       email: email!,
       password: password!,
     );
+
+    if (!isLoggedIn) {
+      const snackBar = SnackBar(
+        content: Text('Failed to register'),
+      );
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      return;
+    }
+
+    Get.offAll(const MainNavigationView());
   }
 }
