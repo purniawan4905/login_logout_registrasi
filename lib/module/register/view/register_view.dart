@@ -69,7 +69,7 @@ class RegisterView extends StatefulWidget {
                       width: MediaQuery.of(context).size.width,
                       height: 46,
                       child: ElevatedButton(
-                        onPressed: () => Get.to(const RegisterView()),
+                        onPressed: () => controller.register(),
                         child: const Text("Register"),
                       ),
                     ),
