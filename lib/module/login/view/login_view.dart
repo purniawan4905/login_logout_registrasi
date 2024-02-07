@@ -19,6 +19,13 @@ class LoginView extends StatefulWidget {
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
                   children: [
+                    Text(
+                      "Login",
+                      style: TextStyle(
+                        fontSize: 24.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                     TextFormField(
                       // initialValue: 'admin@gmail.com',
                       maxLength: 20,
