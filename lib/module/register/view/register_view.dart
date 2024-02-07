@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:login_logout_regitrasi/core.dart';
 import '../controller/register_controller.dart';
@@ -7,7 +6,7 @@ class RegisterView extends StatefulWidget {
   const RegisterView({Key? key}) : super(key: key);
 
   Widget build(context, RegisterController controller) {
-  controller.view = this;
+    controller.view = this;
     return Scaffold(
       backgroundColor: Colors.blueGrey[600],
       body: Container(
@@ -70,7 +69,7 @@ class RegisterView extends StatefulWidget {
                       width: MediaQuery.of(context).size.width,
                       height: 46,
                       child: ElevatedButton(
-                        onPressed: () => controller.login(),
+                        onPressed: () => controller.register(),
                         child: const Text("Login"),
                       ),
                     ),
@@ -95,4 +94,3 @@ class RegisterView extends StatefulWidget {
   @override
   State<RegisterView> createState() => RegisterController();
 }
-    
