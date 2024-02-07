@@ -18,5 +18,8 @@ class ProfileController extends State<ProfileView> {
   @override
   Widget build(BuildContext context) => widget.build(context, this);
 
-  logout() async {}
+  logout() async {
+    await AuthService().logout();
+    Get.offAll(LoginView());
+  }
 }
