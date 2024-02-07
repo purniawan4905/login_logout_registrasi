@@ -2,7 +2,9 @@
     "modules": [
         "login",
         "register",
-        "main_navigation"
+        "main_navigation",
+        "dashboard",
+        "profile"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,
