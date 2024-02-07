@@ -10,7 +10,7 @@ class ProfileView extends StatefulWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Profile"),
-        actions: const [
+        actions: [
           IconButton(
             onPressed: () => controller.logout(),
             icon: const Icon(
