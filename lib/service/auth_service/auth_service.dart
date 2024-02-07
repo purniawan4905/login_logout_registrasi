@@ -16,11 +16,19 @@ class AuthService {
     }
   }
 
-  Future<bool> register() {
+  Future<bool> register({
+    required String email,
+    required String password,
+  }) async {
     try {
-       
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      return true;
     } on Exception catch (err) {
       print(err);
+      return false;
     }
   }
 }
