@@ -22,18 +22,14 @@ class MainNavigationView extends StatefulWidget {
         body: IndexedStack(
           index: controller.selectedIndex,
           children: [
-            Container(
-              color: Colors.red,
-            ),
+            const DashboardView(),
             Container(
               color: Colors.green,
             ),
             Container(
               color: Colors.blue,
             ),
-            Container(
-              color: Colors.purple,
-            ),
+            const ProfileView(),
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
