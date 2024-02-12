@@ -4,6 +4,8 @@
         "register",
         "main_navigation",
         "dashboard",
+        "product_list",
+        "product_form",
         "profile"
     ],
     "module_directory_name": "module",
